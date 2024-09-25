@@ -30,7 +30,7 @@ header nav ul li a {
 .hero {
     position: relative;
     background: url('https://cdn.pixabay.com/photo/2017/08/30/08/06/mathematics-2693867_1280.jpg') no-repeat center center/cover;
-    color: white;
+    color: purple;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -99,9 +99,9 @@ footer {
 }
 
 .shape.square {
-    width: 150px;
-    height: 150px;
-    top: 10%;
+    width: 100px;
+    height: 100px;
+    top: 30%;
     left: 5%;
 }
 

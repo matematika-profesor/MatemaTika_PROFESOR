@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatemaTika PROFESOR</title>
+    <link rel="stylesheet" href="sajt.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MatemaTika PROFESOR</div>
+        <nav>
+            <ul>
+                <li><a href="#about">O nama</a></li>
+                <li><a href="#lessons">Časovi</a></li>
+                <li><a href="#pricing">Cene</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Savladajte matematiku uz našu pomoć!</h1>
+        <button onclick="document.getElementById('contact').scrollIntoView();">Zakažite čas</button>
+    </section>
+
+    <section id="about">
+        <h2>O nama</h2>
+        <p>Naša misija je da pomognemo svakom učeniku da razume i zavoli matematiku kroz interaktivne časove.</p>
+    </section>
+
+    <section id="lessons">
+        <h2>Naši časovi</h2>
+        <ul>
+            <li><strong>Osnovna matematika</strong>: Učenje osnovnih pojmova.</li>
+            <li><strong>Srednjoškolska matematika</strong>: Priprema za ispite.</li>
+            <li><strong>Priprema za prijemne ispite</strong>: Fokus na važnim temama.</li>
+            <li><strong>Online časovi</strong>: Fleksibilni rasporedi.</li>
+        </ul>
+    </section>
+
+    <section id="pricing">
+        <h2>Cenovnik</h2>
+        <div class="pricing-table">
+            <div class="pricing-item">
+                <h3>Osnovna matematika</h3>
+                <p class="price" data-price="1500">1500 RSD</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Srednjoškolska matematika</h3>
+                <p class="price" data-price="2000">2000 RSD</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Priprema za prijemne ispite</h3>
+                <p class="price" data-price="2500">2500 RSD</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Online časovi</h3>
+                <p class="price" data-price="1800">1800 RSD</p>
+            </div>
+        </div>
+        <button id="showPricesBtn">Prikaži cene</button>
+    </section>
+
+    <section id="contact">
+        <h2>Kontaktirajte nas</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Ime" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Poruka" required></textarea>
+            <button type="submit">Pošaljite</button>
+        </form>
+        <div id="formResponse" class="hidden"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MatemaTika PROFESOR</p>
+    </footer>
+
+    <script src="sajt.js"></script>
+    <div class="shape square"></div>
+    <div class="shape circle"></div>
+    <div class="shape triangle"></div>
+</body>
+</html>

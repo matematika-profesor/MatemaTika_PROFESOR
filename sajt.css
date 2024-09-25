@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eae6f2; /* Svetlija pozadina */
+}
+
+header {
+    background: #6a4f8a; /* Tamna ljubičasta */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    background: url('https://cdn.pixabay.com/photo/2017/08/30/08/06/mathematics-2693867_1280.jpg') no-repeat center center/cover;
+    color: white;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    position: relative;
+    z-index: 2;
+}
+
+button {
+    background: #d5a6e0; /* Svetlija ljubičasta */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #b78bc8; /* Još svetlija ljubičasta pri hover */
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #333; /* Tamnija boja teksta */
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pricing-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background: #4b2d6d; /* Još tamnija ljubičasta */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Geometrijski oblici */
+.shape {
+    position: absolute;
+    background: rgba(106, 79, 138, 0.3);
+    z-index: 0; /* Ispod ostalih elemenata */
+}
+
+.shape.square {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 5%;
+}
+
+.shape.circle {
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    right: 10%;
+    border-radius: 50%;
+}
+
+.shape.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(106, 79, 138, 0.3);
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}

@@ -20,3 +20,14 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // Resetuj formu
     document.getElementById('contactForm').reset();
 });
+
+// Promena jezika
+document.getElementById('latinButton').addEventListener('click', function() {
+    document.body.classList.remove('cyrillic');
+    document.body.classList.add('latin');
+});
+
+document.getElementById('cyrillicButton').addEventListener('click', function() {
+    document.body.classList.remove('latin');
+    document.body.classList.add('cyrillic');
+});

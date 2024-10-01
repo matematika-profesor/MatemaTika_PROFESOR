@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eae6f2; /* Svetlija pozadina */
+    background-color: #f3f4f6; /* Svetla pozadina */
 }
 
 header {
-    background: #6a4f8a; /* Tamna ljubičasta */
+    background: #5e4b8d; /* Tamna ljubičasta */
     color: white;
     padding: 15px;
     text-align: center;
@@ -23,7 +23,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: purple;
+    color: #e8d9f3; /* Svetlija ljubičasta */
     text-decoration: none;
     font-weight: bold; /* Podebljano */
 }
@@ -47,7 +47,7 @@ header nav ul li a {
 }
 
 button {
-    background: #d5a6e0; /* Svetlija ljubičasta */
+    background: #b78bc8; /* Svetlija ljubičasta */
     border: none;
     padding: 10px 20px;
     font-size: 1em;
@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-    background: #b78bc8; /* Još svetlija ljubičasta pri hover */
+    background: #d5a6e0; /* Još svetlija ljubičasta pri hover */
 }
 
 section {
@@ -74,7 +74,7 @@ section {
 }
 
 .pricing-item {
-    border: 1px solid #ccc;
+    border: 2px solid #b78bc8; /* Tamnija ljubičasta */
     border-radius: 10px;
     margin: 0 10px;
     padding: 20px;

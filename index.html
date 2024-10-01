@@ -12,14 +12,18 @@
             <button id="latinButton">Latinica</button>
             <button id="cyrillicButton">Ćirilica</button>
         </div>
-        <div class="logo">MatemaTika PROFESOR</div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/150" alt="Logo" class="logo-img">
+            <span class="latin-text">MatemaTika PROFESOR</span>
+            <span class="cyrillic-text hidden">МатемаТика ПРОФЕСОР</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#about">O nama</a></li>
-                <li><a href="#lessons">Časovi</a></li>
-                <li><a href="#tools">Alati</a></li>
-                <li><a href="#pricing">Cene</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about" class="latin-text">O nama</a><a href="#about" class="cyrillic-text hidden">О нама</a></li>
+                <li><a href="#lessons" class="latin-text">Časovi</a><a href="#lessons" class="cyrillic-text hidden">Часови</a></li>
+                <li><a href="#tools" class="latin-text">Alati</a><a href="#tools" class="cyrillic-text hidden">Алат</a></li>
+                <li><a href="#pricing" class="latin-text">Cene</a><a href="#pricing" class="cyrillic-text hidden">Цене</a></li>
+                <li><a href="#contact" class="latin-text">Kontakt</a><a href="#contact" class="cyrillic-text hidden">Контакт</a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +31,8 @@
     <section class="hero" id="hero">
         <h1 class="latin-text">Ulažite u svoju decu, obrazovanje je najbolja investicija!</h1>
         <h1 class="cyrillic-text hidden">Улажите у своју децу, образовање је најбоља инвестиција!</h1>
-        <button onclick="document.getElementById('contact').scrollIntoView();">Zakažite čas</button>
+        <button onclick="document.getElementById('contact').scrollIntoView();" class="latin-text">Zakažite čas</button>
+        <button onclick="document.getElementById('contact').scrollIntoView();" class="cyrillic-text hidden">Закажите час</button>
     </section>
 
     <section id="about">
@@ -88,14 +93,16 @@
                 <p class="price" data-price="1800">1800 RSD</p>
             </div>
         </div>
-        <button id="showPricesBtn">Prikaži cene</button>
+        <button id="showPricesBtn" class="latin-text">Prikaži cene</button>
+        <button id="showPricesBtn" class="cyrillic-text hidden">Прикажи цене</button>
     </section>
 
     <section id="social">
         <h2 class="latin-text">Povežite se sa nama</h2>
         <h2 class="cyrillic-text hidden">Повежите се са нама</h2>
         <a href="https://www.instagram.com/matematika.profesor" target="_blank">
-            <button>Pratite nas na Instagramu</button>
+            <button class="latin-text">Pratite nas na Instagramu</button>
+            <button class="cyrillic-text hidden">Пратите нас на Инстаграму</button>
         </a>
     </section>
 
@@ -106,7 +113,8 @@
             <input type="text" id="name" placeholder="Ime" required>
             <input type="email" id="email" placeholder="Email" required>
             <textarea id="message" placeholder="Poruka" required></textarea>
-            <button type="submit">Pošaljite</button>
+            <button type="submit" class="latin-text">Pošaljite</button>
+            <button type="submit" class="cyrillic-text hidden">Пошаљите</button>
         </form>
         <div id="formResponse" class="hidden"></div>
     </section>

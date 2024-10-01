@@ -36,12 +36,18 @@ document.getElementById('cyrillicButton').addEventListener('click', function() {
 
 function updateTextToLatin() {
     document.querySelectorAll('.cyrillic-text').forEach(element => {
-        element.classList.remove('cyrillic-text');
+        element.classList.add('hidden');
+    });
+    document.querySelectorAll('.latin-text').forEach(element => {
+        element.classList.remove('hidden');
     });
 }
 
 function updateTextToCyrillic() {
     document.querySelectorAll('.latin-text').forEach(element => {
-        element.classList.add('cyrillic-text');
+        element.classList.add('hidden');
+    });
+    document.querySelectorAll('.cyrillic-text').forEach(element => {
+        element.classList.remove('hidden');
     });
 }

@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eae6f2; /* Svetlija pozadina */
+    background-color: #f3f4f6; /* Svetla pozadina */
 }
 
 header {
-    background: #6a4f8a; /* Tamna ljubičasta */
+    background: #5e4b8d; /* Tamna ljubičasta */
     color: white;
     padding: 15px;
     text-align: center;
@@ -23,14 +23,15 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: #e8d9f3; /* Svetlija ljubičasta */
     text-decoration: none;
+    font-weight: bold; /* Podebljano */
 }
 
 .hero {
     position: relative;
     background: url('https://cdn.pixabay.com/photo/2017/08/30/08/06/mathematics-2693867_1280.jpg') no-repeat center center/cover;
-    color: purple;
+    color: white;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -42,10 +43,11 @@ header nav ul li a {
     font-size: 2.5em;
     position: relative;
     z-index: 2;
+    color: #9b59b6; /* Ljubičasta boja za tekst */
 }
 
 button {
-    background: #d5a6e0; /* Svetlija ljubičasta */
+    background: #b78bc8; /* Svetlija ljubičasta */
     border: none;
     padding: 10px 20px;
     font-size: 1em;
@@ -54,7 +56,7 @@ button {
 }
 
 button:hover {
-    background: #b78bc8; /* Još svetlija ljubičasta pri hover */
+    background: #d5a6e0; /* Još svetlija ljubičasta pri hover */
 }
 
 section {
@@ -72,7 +74,7 @@ section {
 }
 
 .pricing-item {
-    border: 1px solid #ccc;
+    border: 2px solid #b78bc8; /* Tamnija ljubičasta */
     border-radius: 10px;
     margin: 0 10px;
     padding: 20px;
@@ -99,10 +101,11 @@ footer {
 }
 
 .shape.square {
-    width: 100px;
-    height: 100px;
-    top: 30%;
-    left: 5%;
+    width: 150px;
+    height: 150px;
+    top: 50%; /* Pomeri kvadrat na sredinu */
+    left: 10%; /* Promeni poziciju kvadrata */
+    transform: translate(-50%, -50%); /* Centriraj kvadrat */
 }
 
 .shape.circle {
@@ -120,6 +123,6 @@ footer {
     border-right: 50px solid transparent;
     border-bottom: 100px solid rgba(106, 79, 138, 0.3);
     position: absolute;
-    top: 40%;
+    top: 30%; /* Pomeri trougao na drugu lokaciju */
     left: 40%;
 }

@@ -21,7 +21,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     document.getElementById('contactForm').reset();
 });
 
-// Promena jezika
 document.getElementById('latinButton').addEventListener('click', function() {
     document.body.classList.remove('cyrillic');
     document.body.classList.add('latin');

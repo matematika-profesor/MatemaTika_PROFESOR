@@ -6,8 +6,8 @@
     <title>MatemaTika PROFESOR</title>
     <link rel="stylesheet" href="sajt.css">
 </head>
-<body>
-    <header>
+<body class="latin">
+    <header id="header">
         <div class="logo">MatemaTika PROFESOR</div>
         <nav>
             <ul>
@@ -20,7 +20,7 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <h1>Ulažite u svoju decu, obrazovanje je najbolja investicija!</h1>
         <button onclick="document.getElementById('contact').scrollIntoView();">Zakažite čas</button>
     </section>
@@ -73,6 +73,19 @@
         <button id="showPricesBtn">Prikaži cene</button>
     </section>
 
+    <section id="language">
+        <h2>Izaberite jezik</h2>
+        <button id="latinButton">Latinica</button>
+        <button id="cyrillicButton">Ćirilica</button>
+    </section>
+
+    <section id="social">
+        <h2>Povežite se sa nama</h2>
+        <a href="https://www.instagram.com/matematika.profesor" target="_blank">
+            <button>Pratite nas na Instagramu</button>
+        </a>
+    </section>
+
     <section id="contact">
         <h2>Kontaktirajte nas</h2>
         <form id="contactForm">
@@ -84,7 +97,7 @@
         <div id="formResponse" class="hidden"></div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 MatemaTika PROFESOR</p>
     </footer>
 

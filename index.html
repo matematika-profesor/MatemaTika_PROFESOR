@@ -6,20 +6,21 @@
     <title>MatemaTika PROFESOR</title>
     <link rel="stylesheet" href="sajt.css">
 </head>
-<body>
-    <header>
+<body class="latin">
+    <header id="header">
         <div class="logo">MatemaTika PROFESOR</div>
         <nav>
             <ul>
                 <li><a href="#about">O nama</a></li>
                 <li><a href="#lessons">Časovi</a></li>
+                <li><a href="#tools">Alati</a></li>
                 <li><a href="#pricing">Cene</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <h1>Ulažite u svoju decu, obrazovanje je najbolja investicija!</h1>
         <button onclick="document.getElementById('contact').scrollIntoView();">Zakažite čas</button>
     </section>
@@ -33,9 +34,19 @@
         <h2>Naši časovi</h2>
         <ul>
             <li><strong>Osnovna matematika</strong>: Učenje osnovnih pojmova.</li>
-            <li><strong>Srednjoškolska matematika</strong>: Proširivanje osnovnog znanja i rešavanje složenih matematičkih tema.</li>
+            <li><strong>Srednjoškolska matematika</strong>: Proširivanje osnovnih znanja i učenje kompleksnijih matematičkih tema.</li>
             <li><strong>Priprema za prijemne ispite</strong>: Fokus na važnim temama.</li>
             <li><strong>Online časovi</strong>: Fleksibilni rasporedi.</li>
+        </ul>
+    </section>
+
+    <section id="tools">
+        <h2>Interaktivni alati za matematiku</h2>
+        <ul>
+            <li><a href="https://www.khanacademy.org/math" target="_blank">Khan Academy</a>: Učenje kroz video lekcije i vežbe.</li>
+            <li><a href="https://www.geogebra.org/" target="_blank">GeoGebra</a>: Matematička softverska platforma za vizualizaciju.</li>
+            <li><a href="https://www.desmos.com/calculator" target="_blank">Desmos</a>: Interaktivni grafički kalkulator.</li>
+            <li><a href="https://www.mathway.com/" target="_blank">Mathway</a>: Instant rešenja matematičkih problema.</li>
         </ul>
     </section>
 
@@ -62,6 +73,19 @@
         <button id="showPricesBtn">Prikaži cene</button>
     </section>
 
+    <section id="language">
+        <h2>Izaberite jezik</h2>
+        <button id="latinButton">Latinica</button>
+        <button id="cyrillicButton">Ćirilica</button>
+    </section>
+
+    <section id="social">
+        <h2>Povežite se sa nama</h2>
+        <a href="https://www.instagram.com/matematika.profesor" target="_blank">
+            <button>Pratite nas na Instagramu</button>
+        </a>
+    </section>
+
     <section id="contact">
         <h2>Kontaktirajte nas</h2>
         <form id="contactForm">
@@ -73,7 +97,7 @@
         <div id="formResponse" class="hidden"></div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 MatemaTika PROFESOR</p>
     </footer>
 

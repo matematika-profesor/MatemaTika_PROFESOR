@@ -1,187 +1,91 @@
-* {
-    box-sizing: border-box;
-}
-
+/* Osnovni stilovi za telo */
 body {
+    background: linear-gradient(135deg, #ffefba, #ffffff);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #0c0c0c;
-    color: #ffffff;
 }
 
-header {
-    background-color: rgba(30, 30, 30, 0.8);
-    color: white;
+/* Animacija pozadine */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Stilovi za hero sekciju */
+.hero {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilovi za tabelu cena */
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.pricing-item {
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+/* Stilovi za preporuke */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.testimonial {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* Stilovi za forme */
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-.language-selection {
-    margin-bottom: 10px;
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    margin: 0 5px;
-    padding: 10px 20px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo-img {
-    width: 100px;
-    height: auto;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #007bff;
-}
-
-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: rgba(50, 50, 50, 0.9);
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-h1, h2 {
-    margin: 10px 0;
-}
-
-.pricing-table {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.pricing-item {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 200px;
-    transition: transform 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.pricing-item:hover {
-    transform: scale(1.05);
-}
-
-#contactForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-}
-
-button[type="submit"] {
-    background-color: #28a745;
-}
-
-button[type="submit"]:hover {
-    background-color: #218838;
-}
-
+/* Skriveni elementi */
 .hidden {
     display: none;
-}
-
-.hero {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-    overflow: hidden;
-}
-
-.geometric-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-    animation: moveBackground 10s infinite linear;
-}
-
-@keyframes moveBackground {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(100%, 100%);
-    }
-}
-
-/* Animation */
-@keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.7;
-    animation: floating 6s infinite ease-in-out;
-    pointer-events: none;
 }

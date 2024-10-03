@@ -8,102 +8,108 @@
 </head>
 <body class="latin">
     <header id="header">
-        <div class="logo">MatemaTika PROFESOR</div>
+        <div class="language-selection">
+            <button id="latinButton" aria-label="Prebaci na latinicu">Latinica</button>
+            <button id="cyrillicButton" aria-label="Prebaci na ćirilicu">Ćirilica</button>
+        </div>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/matematika-profesor/MatemaTika_PROFESOR/main/a.jpg" alt="Logo MatemaTika PROFESOR" class="logo-img">
+            <span class="latin-text">MatemaTika PROFESOR</span>
+            <span class="cyrillic-text hidden">МатемаТика ПРОФЕСОР</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#about">O nama</a></li>
-                <li><a href="#lessons">Časovi</a></li>
-                <li><a href="#tools">Alati</a></li>
-                <li><a href="#pricing">Cene</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about" class="latin-text">O nama</a><a href="#about" class="cyrillic-text hidden">О нама</a></li>
+                <li><a href="#lessons" class="latin-text">Časovi</a><a href="#lessons" class="cyrillic-text hidden">Часови</a></li>
+                <li><a href="#tools" class="latin-text">Alati</a><a href="#tools" class="cyrillic-text hidden">Алат</a></li>
+                <li><a href="#pricing" class="latin-text">Cene</a><a href="#pricing" class="cyrillic-text hidden">Цене</a></li>
+                <li><a href="#contact" class="latin-text">Kontakt</a><a href="#contact" class="cyrillic-text hidden">Контакт</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero" id="hero">
-        <h1>Ulažite u svoju decu, obrazovanje je najbolja investicija!</h1>
-        <button onclick="document.getElementById('contact').scrollIntoView();">Zakažite čas</button>
+        <h1 class="latin-text">Ulažite u svoju decu, obrazovanje je najbolja investicija!</h1>
+        <h1 class="cyrillic-text hidden">Улажите у своју децу, образовање је најбоља инвестиција!</h1>
+        <button onclick="document.getElementById('contact').scrollIntoView();" class="latin-text">Zakažite čas</button>
+        <button onclick="document.getElementById('contact').scrollIntoView();" class="cyrillic-text hidden">Закажите час</button>
     </section>
 
     <section id="about">
-        <h2>O nama</h2>
-        <p>Naša misija je da pomognemo svakom učeniku da razume i zavoli matematiku kroz interaktivne časove.</p>
+        <h2 class="latin-text">O nama</h2>
+        <h2 class="cyrillic-text hidden">О нама</h2>
+        <p class="latin-text">Naša misija je da pomognemo svakom učeniku da razume i zavoli matematiku kroz interaktivne časove.</p>
+        <p class="cyrillic-text hidden">Наша мисија је да помогнемо сваком ученику да разуме и заволи математику кроз интерактивне часове.</p>
     </section>
 
     <section id="lessons">
-        <h2>Naši časovi</h2>
+        <h2 class="latin-text">Naši časovi</h2>
+        <h2 class="cyrillic-text hidden">Наши часови</h2>
         <ul>
-            <li><strong>Osnovna matematika</strong>: Učenje osnovnih pojmova.</li>
-            <li><strong>Srednjoškolska matematika</strong>: Proširivanje osnovnih znanja i učenje kompleksnijih matematičkih tema.</li>
-            <li><strong>Priprema za prijemne ispite</strong>: Fokus na važnim temama.</li>
-            <li><strong>Online časovi</strong>: Fleksibilni rasporedi.</li>
+            <li class="latin-text"><strong>Osnovna matematika</strong>: Učenje osnovnih pojmova.</li>
+            <li class="cyrillic-text hidden"><strong>Основна математика</strong>: Учeње основних појмова.</li>
+            <li class="latin-text"><strong>Srednjoškolska matematika</strong>: Proširivanje osnovnih znanja i učenje kompleksnijih matematičkih tema.</li>
+            <li class="cyrillic-text hidden"><strong>Средњошколска математика</strong>: Проширивање основних знања и учење комплекснијих математичких тема.</li>
+            <li class="latin-text"><strong>Priprema za prijemne ispite</strong>: Fokus na važnim temama.</li>
+            <li class="cyrillic-text hidden"><strong>Припрема за пријемне испите</strong>: Фокус на важним темама.</li>
+            <li class="latin-text"><strong>Online časovi</strong>: Fleksibilni rasporedi.</li>
+            <li class="cyrillic-text hidden"><strong>Онлайн часови</strong>: Флексибилни распореди.</li>
         </ul>
     </section>
 
     <section id="tools">
-        <h2>Interaktivni alati za matematiku</h2>
+        <h2 class="latin-text">Interaktivni alati za matematiku</h2>
+        <h2 class="cyrillic-text hidden">Интерактивни алати за математику</h2>
         <ul>
-            <li><a href="https://www.khanacademy.org/math" target="_blank">Khan Academy</a>: Učenje kroz video lekcije i vežbe.</li>
-            <li><a href="https://www.geogebra.org/" target="_blank">GeoGebra</a>: Matematička softverska platforma za vizualizaciju.</li>
-            <li><a href="https://www.desmos.com/calculator" target="_blank">Desmos</a>: Interaktivni grafički kalkulator.</li>
-            <li><a href="https://www.mathway.com/" target="_blank">Mathway</a>: Instant rešenja matematičkih problema.</li>
+            <li class="latin-text"><a href="https://www.khanacademy.org/math" target="_blank">Khan Academy</a>: Učenje kroz video lekcije i vežbe.</li>
+            <li class="cyrillic-text hidden"><a href="https://www.khanacademy.org/math" target="_blank">Khan Academy</a>: Учење кроз видео лекције и вежбе.</li>
+            <li class="latin-text"><a href="https://www.geogebra.org/" target="_blank">GeoGebra</a>: Matematička softverska platforma za vizualizaciju.</li>
+            <li class="cyrillic-text hidden"><a href="https://www.geogebra.org/" target="_blank">GeoGebra</a>: Математичка софтверска платформа за визуализацију.</li>
+            <li class="latin-text"><a href="https://www.desmos.com/calculator" target="_blank">Desmos</a>: Interaktivni grafički kalkulator.</li>
+            <li class="cyrillic-text hidden"><a href="https://www.desmos.com/calculator" target="_blank">Desmos</a>: Интерактивни графички калкулатор.</li>
+            <li class="latin-text"><a href="https://www.mathway.com/" target="_blank">Mathway</a>: Instant rešenja matematičkih problema.</li>
+            <li class="cyrillic-text hidden"><a href="https://www.mathway.com/" target="_blank">Mathway</a>: Инстант решења математичких проблема.</li>
         </ul>
     </section>
 
     <section id="pricing">
-        <h2>Cenovnik</h2>
+        <h2 class="latin-text">Cenovnik</h2>
+        <h2 class="cyrillic-text hidden">Ценовник</h2>
         <div class="pricing-table">
             <div class="pricing-item">
-                <h3>Osnovna matematika</h3>
-                <p class="price" data-price="1500">1500 RSD</p>
+                <h3 class="latin-text">Individualna nastava</h3>
+                <h3 class="cyrillic-text hidden">Индивидуална настава</h3>
+                <p class="price latin-text hidden">1h - 1400 RSD</p>
+                <p class="price cyrillic-text hidden">1h - 1400 RSD</p>
             </div>
             <div class="pricing-item">
-                <h3>Srednjoškolska matematika</h3>
-                <p class="price" data-price="2000">2000 RSD</p>
+                <h3 class="latin-text">Grupa 2,3 učenika</h3>
+                <h3 class="cyrillic-text hidden">Група 2,3 ученика</h3>
+                <p class="price latin-text hidden">1h 30min - 1400 RSD</p>
+                <p class="price cyrillic-text hidden">1h 30min - 1400 RSD</p>
             </div>
             <div class="pricing-item">
-                <h3>Priprema za prijemne ispite</h3>
-                <p class="price" data-price="2500">2500 RSD</p>
+                <h3 class="latin-text">Grupa 5+ učenika</h3>
+                <h3 class="cyrillic-text hidden">Група 5+ ученика</h3>
+                <p class="price latin-text hidden">1h 30min - 1000 RSD</p>
+                <p class="price cyrillic-text hidden">1h 30min - 1000 RSD</p>
             </div>
             <div class="pricing-item">
-                <h3>Online časovi</h3>
-                <p class="price" data-price="1800">1800 RSD</p>
+                <h3 class="latin-text">Online časovi</h3>
+                <h3 class="cyrillic-text hidden">Онлайн часови</h3>
+                <p class="price latin-text hidden">1h - 1800 RSD</p>
+                <p class="price cyrillic-text hidden">1h - 1800 RSD</p>
             </div>
         </div>
-        <button id="showPricesBtn">Prikaži cene</button>
+        <button id="showPricesBtn" class="latin-text">Prikaži cene</button>
+        <button id="showPricesBtnCyr" class="cyrillic-text hidden">Прикажи цене</button>
     </section>
 
-    <section id="language">
-        <h2>Izaberite jezik</h2>
-        <button id="latinButton">Latinica</button>
-        <button id="cyrillicButton">Ćirilica</button>
-    </section>
-
-    <section id="social">
-        <h2>Povežite se sa nama</h2>
-        <a href="https://www.instagram.com/matematika.profesor" target="_blank">
-            <button>Pratite nas na Instagramu</button>
-        </a>
-    </section>
-
-    <section id="contact">
-        <h2>Kontaktirajte nas</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Ime" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <textarea id="message" placeholder="Poruka" required></textarea>
-            <button type="submit">Pošaljite</button>
-        </form>
-        <div id="formResponse" class="hidden"></div>
-    </section>
-
-    <footer id="footer">
-        <p>&copy; 2024 MatemaTika PROFESOR</p>
+    <footer>
+        <p class="latin-text">Kontakt: profesor@gmail.com</p>
+        <p class="cyrillic-text hidden">Контакт: profesor@gmail.com</p>
     </footer>
 
     <script src="sajt.js"></script>
-    <div class="shape square"></div>
-    <div class="shape circle"></div>
-    <div class="shape triangle"></div>
 </body>
 </html>

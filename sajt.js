@@ -1,33 +1,24 @@
-document.getElementById('showPricesBtn').addEventListener('click', function() {
-    const prices = document.querySelectorAll('.price');
-    prices.forEach(price => {
-        const priceValue = price.getAttribute('data-price');
-        alert(`Cena za ${price.previousElementSibling.innerText} je ${priceValue} RSD`);
-    });
-});
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Sprečava osvežavanje stranice
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    // Ovdje bi obično išao poziv serveru za slanje poruke
-    document.getElementById('formResponse').innerText = `Hvala, ${name}! Vaša poruka je poslata.`;
-    document.getElementById('formResponse').classList.remove('hidden');
-
-    // Resetuj formu
-    document.getElementById('contactForm').reset();
-});
-
-// Promena jezika
-document.getElementById('latinButton').addEventListener('click', function() {
-    document.body.classList.remove('cyrillic');
+document.getElementById('latinButton').addEventListener('click', () => {
     document.body.classList.add('latin');
+    document.body.classList.remove('cyrillic');
+    toggleLanguage(false);
 });
 
-document.getElementById('cyrillicButton').addEventListener('click', function() {
-    document.body.classList.remove('latin');
+document.getElementById('cyrillicButton').addEventListener('click', () => {
     document.body.classList.add('cyrillic');
+    document.body.classList.remove('latin');
+    toggleLanguage(true);
 });
+
+document.getElementById('showPricesBtn').addEventListener('click', showPrices);
+document.getElementById('showPricesBtnCyr').addEventListener('click', showPrices);
+
+function toggleLanguage(isCyrillic) {
+    document.querySelectorAll('.latin-text').forEach(el => el.classList.toggle('hidden', isCyrillic));
+    document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.toggle('hidden', !isCyrillic));
+}
+
+function showPrices() {
+    document.querySelectorAll('.price').forEach(el => el.classList.toggle('hidden'));
+}

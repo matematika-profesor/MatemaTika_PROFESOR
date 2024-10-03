@@ -1,4 +1,3 @@
-
 document.getElementById('latinButton').addEventListener('click', () => {
     document.body.classList.add('latin');
     document.body.classList.remove('cyrillic');

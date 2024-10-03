@@ -1,34 +1,24 @@
-// Prebacivanje između latinice i ćirilice
-const latinButton = document.getElementById('latinButton');
-const cyrillicButton = document.getElementById('cyrillicButton');
 
-latinButton.addEventListener('click', function() {
-    document.body.classList.remove('cyrillic');
+document.getElementById('latinButton').addEventListener('click', () => {
     document.body.classList.add('latin');
-    document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.add('hidden'));
-    document.querySelectorAll('.latin-text').forEach(el => el.classList.remove('hidden'));
+    document.body.classList.remove('cyrillic');
+    toggleLanguage(false);
 });
 
-cyrillicButton.addEventListener('click', function() {
-    document.body.classList.remove('latin');
+document.getElementById('cyrillicButton').addEventListener('click', () => {
     document.body.classList.add('cyrillic');
-    document.querySelectorAll('.latin-text').forEach(el => el.classList.add('hidden'));
-    document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.remove('hidden'));
+    document.body.classList.remove('latin');
+    toggleLanguage(true);
 });
 
-// Validacija forme
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+document.getElementById('showPricesBtn').addEventListener('click', showPrices);
+document.getElementById('showPricesBtnCyr').addEventListener('click', showPrices);
 
-    // Validacija unosa
-    if (name && email && message) {
-        document.getElementById('confirmation').textContent = 'Poruka je uspešno poslata!';
-        document.getElementById('confirmation').classList.remove('hidden');
-        // Ovde dodajte kod za slanje email-a putem EmailJS
-    } else {
-        alert('Molimo unesite sve podatke.');
-    }
-});
+function toggleLanguage(isCyrillic) {
+    document.querySelectorAll('.latin-text').forEach(el => el.classList.toggle('hidden', isCyrillic));
+    document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.toggle('hidden', !isCyrillic));
+}
+
+function showPrices() {
+    document.querySelectorAll('.price').forEach(el => el.classList.toggle('hidden'));
+}

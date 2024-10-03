@@ -5,6 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MatemaTika PROFESOR</title>
     <link rel="stylesheet" href="sajt.css">
+    <style>
+        /* Osnovni stilovi za pozadinu i animaciju */
+        body {
+            background: linear-gradient(135deg, #ffefba, #ffffff);
+            background-size: 200% 200%;
+            animation: gradient 10s ease infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Dodatni stilovi za hero sekciju */
+        .hero {
+            padding: 50px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-table {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .pricing-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Stilovi za preporuke */
+        .testimonials {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .testimonial {
+            margin: 10px 0;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body class="latin">
     <header id="header">
@@ -68,99 +120,101 @@
             <li class="cyrillic-text hidden"><a href="https://www.geogebra.org/" target="_blank">GeoGebra</a>: Математичка софтверска платформа за визуализацију.</li>
             <li class="latin-text"><a href="https://www.desmos.com/calculator" target="_blank">Desmos</a>: Interaktivni grafički kalkulator.</li>
             <li class="cyrillic-text hidden"><a href="https://www.desmos.com/calculator" target="_blank">Desmos</a>: Интерактивни графички калкулатор.</li>
-            <li class="latin-text"><a href="https://www.mathway.com/" target="_blank">Mathway</a>: Instant rešenja matematičkih problema.</li>
-            <li class="cyrillic-text hidden"><a href="https://www.mathway.com/" target="_blank">Mathway</a>: Инстант решења математичких проблема.</li>
         </ul>
     </section>
 
     <section id="pricing">
-        <h2 class="latin-text">Cenovnik</h2>
-        <h2 class="cyrillic-text hidden">Ценовник</h2>
+        <h2 class="latin-text">Cene</h2>
+        <h2 class="cyrillic-text hidden">Цене</h2>
         <div class="pricing-table">
             <div class="pricing-item">
-                <h3 class="latin-text">Individualna nastava</h3>
-                <h3 class="cyrillic-text hidden">Индивидуална настава</h3>
-                <p class="price latin-text hidden">1h - 1400 RSD</p>
-                <p class="price cyrillic-text hidden">1h - 1400 RSD</p>
+                <h3 class="latin-text">Osnovni paket</h3>
+                <h3 class="cyrillic-text hidden">Основни пакет</h3>
+                <p class="latin-text">10 časova: 10.000 RSD</p>
+                <p class="cyrillic-text hidden">10 часова: 10.000 РСД</p>
             </div>
             <div class="pricing-item">
-                <h3 class="latin-text">Grupa 2,3 učenika</h3>
-                <h3 class="cyrillic-text hidden">Група 2,3 ученика</h3>
-                <p class="price latin-text hidden">1h 30min - 1400 RSD</p>
-                <p class="price cyrillic-text hidden">1h 30min - 1400 RSD</p>
+                <h3 class="latin-text">Standard paket</h3>
+                <h3 class="cyrillic-text hidden">Стандард пакет</h3>
+                <p class="latin-text">20 časova: 18.000 RSD</p>
+                <p class="cyrillic-text hidden">20 часова: 18.000 РСД</p>
             </div>
             <div class="pricing-item">
-                <h3 class="latin-text">Grupa 5+ učenika</h3>
-                <h3 class="cyrillic-text hidden">Група 5+ ученика</h3>
-                <p class="price latin-text hidden">1h 30min - 1000 RSD</p>
-                <p class="price cyrillic-text hidden">1h 30min - 1000 RSD</p>
-            </div>
-            <div class="pricing-item">
-                <h3 class="latin-text">Online časovi</h3>
-                <h3 class="cyrillic-text hidden">Онлайн часови</h3>
-                <p class="price latin-text hidden">1h - 1800 RSD</p>
-                <p class="price cyrillic-text hidden">1h - 1800 RSD</p>
+                <h3 class="latin-text">Premium paket</h3>
+                <h3 class="cyrillic-text hidden">Премиум пакет</h3>
+                <p class="latin-text">30 časova: 25.000 RSD</p>
+                <p class="cyrillic-text hidden">30 часова: 25.000 РСД</p>
             </div>
         </div>
     </section>
 
+    <section class="testimonials">
+        <h2 class="latin-text">Preporuke</h2>
+        <h2 class="cyrillic-text hidden">Препоруке</h2>
+        <div class="testimonial latin-text">"Odličan učitelj! Mnoge stvari su mi postale jasnije." - Marko</div>
+        <div class="testimonial cyrillic-text hidden">"Одличан учитељ! Многе ствари су ми постале јасније." - Марко</div>
+        <div class="testimonial latin-text">"Preporučujem svima koji žele da unaprede svoje znanje." - Jovana</div>
+        <div class="testimonial cyrillic-text hidden">"Препоручујем свима који желе да унапреде своје знање." - Јована</div>
+    </section>
+
     <section id="contact">
-        <h2 class="latin-text">Kontaktirajte nas</h2>
-        <h2 class="cyrillic-text hidden">Контактирајте нас</h2>
+        <h2 class="latin-text">Kontakt</h2>
+        <h2 class="cyrillic-text hidden">Контакт</h2>
         <form id="contactForm">
-            <input type="text" id="name" placeholder="Ime" required class="latin-text">
-            <input type="text" id="name" placeholder="Име" required class="cyrillic-text hidden">
-            <input type="email" id="email" placeholder="Email" required class="latin-text">
-            <input type="email" id="email" placeholder="Емаил" required class="cyrillic-text hidden">
-            <textarea id="message" placeholder="Poruka" required class="latin-text"></textarea>
-            <textarea id="message" placeholder="Порука" required class="cyrillic-text hidden"></textarea>
+            <label for="name" class="latin-text">Ime:</label>
+            <label for="name" class="cyrillic-text hidden">Име:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email" class="latin-text">Email:</label>
+            <label for="email" class="cyrillic-text hidden">Емаил:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message" class="latin-text">Poruka:</label>
+            <label for="message" class="cyrillic-text hidden">Порука:</label>
+            <textarea id="message" name="message" required></textarea>
             <button type="submit" class="latin-text">Pošalji</button>
             <button type="submit" class="cyrillic-text hidden">Пошаљи</button>
         </form>
-        <div id="successMessage" class="hidden latin-text">Poruka je uspešno poslata!</div>
-        <div id="successMessage" class="hidden cyrillic-text">Порука је успешно послата!</div>
+        <div id="confirmation" class="hidden"></div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.2.0/dist/email.min.js"></script>
+    <footer>
+        <p>&copy; 2024 MatemaTika PROFESOR. Sva prava zadržana.</p>
+    </footer>
+
     <script>
-        // EmailJS configuration
-        (function(){
-            emailjs.init("wcqOEJyjlrYsSLiWn");
-        })();
+        // Prebacivanje između latinice i ćirilice
+        const latinButton = document.getElementById('latinButton');
+        const cyrillicButton = document.getElementById('cyrillicButton');
 
-        // Language switching
-        const latinButton = document.getElementById("latinButton");
-        const cyrillicButton = document.getElementById("cyrillicButton");
-
-        latinButton.addEventListener("click", () => {
-            document.body.classList.remove("cyrillic");
-            document.body.classList.add("latin");
-            document.querySelectorAll(".latin-text").forEach(el => el.classList.remove("hidden"));
-            document.querySelectorAll(".cyrillic-text").forEach(el => el.classList.add("hidden"));
+        latinButton.addEventListener('click', function() {
+            document.body.classList.remove('cyrillic');
+            document.body.classList.add('latin');
+            document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.latin-text').forEach(el => el.classList.remove('hidden'));
         });
 
-        cyrillicButton.addEventListener("click", () => {
-            document.body.classList.remove("latin");
-            document.body.classList.add("cyrillic");
-            document.querySelectorAll(".cyrillic-text").forEach(el => el.classList.remove("hidden"));
-            document.querySelectorAll(".latin-text").forEach(el => el.classList.add("hidden"));
+        cyrillicButton.addEventListener('click', function() {
+            document.body.classList.remove('latin');
+            document.body.classList.add('cyrillic');
+            document.querySelectorAll('.latin-text').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.remove('hidden'));
         });
 
-        // Form submission
-        const contactForm = document.getElementById("contactForm");
-        contactForm.addEventListener("submit", function(event) {
+        // Validacija forme
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
 
-            emailjs.sendForm("service_w7f0n2a", "template_rt1po5b", this)
-                .then(() => {
-                    document.getElementById("successMessage").classList.remove("hidden");
-                    contactForm.reset();
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
+            // Validacija unosa
+            if (name && email && message) {
+                document.getElementById('confirmation').textContent = 'Poruka je uspešno poslata!';
+                document.getElementById('confirmation').classList.remove('hidden');
+                // Ovde dodajte kod za slanje email-a putem EmailJS
+            } else {
+                alert('Molimo unesite sve podatke.');
+            }
         });
     </script>
-    <script src="sajt.js"></script>
 </body>
 </html>

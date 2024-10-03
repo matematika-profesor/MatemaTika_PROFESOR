@@ -1,52 +1,34 @@
-// Funkcija za promenu pisma
-function changeFont(font) {
-    document.body.setAttribute('data-font', font);
-}
+// Prebacivanje između latinice i ćirilice
+const latinButton = document.getElementById('latinButton');
+const cyrillicButton = document.getElementById('cyrillicButton');
 
-// Slanje emaila putem EmailJS
-function sendEmail(event) {
-    event.preventDefault(); // Sprečava ponovno učitavanje stranice
+latinButton.addEventListener('click', function() {
+    document.body.classList.remove('cyrillic');
+    document.body.classList.add('latin');
+    document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.latin-text').forEach(el => el.classList.remove('hidden'));
+});
 
-    const form = event.target;
-    const formData = new FormData(form);
+cyrillicButton.addEventListener('click', function() {
+    document.body.classList.remove('latin');
+    document.body.classList.add('cyrillic');
+    document.querySelectorAll('.latin-text').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.remove('hidden'));
+});
 
-    emailjs.sendForm('service_w7f0n2a', 'template_rt1po5b', formData)
-        .then(() => {
-            alert('Poruka je uspešno poslata!');
-            form.reset(); // Resetuje formu
-        }, (error) => {
-            alert('Greška: ' + JSON.stringify(error));
-        });
-}
+// Validacija forme
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
 
-// Dodavanje event listener-a za slanje emaila
-document.getElementById('contactForm').addEventListener('submit', sendEmail);
-
-// Dodavanje funkcionalnosti za izbor jezika
-document.getElementById('latinBtn').addEventListener('click', () => changeFont('latin'));
-document.getElementById('cyrillicBtn').addEventListener('click', () => changeFont('cyrillic'));
-
-// Prikazivanje geometrijskih oblika u pozadini
-function createGeometricShapes() {
-    const numShapes = 20; // Broj oblika
-    const container = document.querySelector('.geometric-background');
-
-    for (let i = 0; i < numShapes; i++) {
-        const shape = document.createElement('div');
-        shape.classList.add('shape');
-
-        // Postavljanje nasumičnih dimenzija, pozicija i boje
-        const size = Math.random() * 100 + 20; // Veličina između 20px i 120px
-        shape.style.width = `${size}px`;
-        shape.style.height = `${size}px`;
-        shape.style.top = `${Math.random() * 100}vh`;
-        shape.style.left = `${Math.random() * 100}vw`;
-        shape.style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`;
-        shape.style.animationDuration = `${Math.random() * 3 + 2}s`; // Trajanje animacije između 2s i 5s
-
-        container.appendChild(shape);
+    // Validacija unosa
+    if (name && email && message) {
+        document.getElementById('confirmation').textContent = 'Poruka je uspešno poslata!';
+        document.getElementById('confirmation').classList.remove('hidden');
+        // Ovde dodajte kod za slanje email-a putem EmailJS
+    } else {
+        alert('Molimo unesite sve podatke.');
     }
-}
-
-// Inicijalizacija geometrijskih oblika na učitavanju
-window.onload = createGeometricShapes;
+});

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MatemaTika PROFESOR</title>
     <link rel="stylesheet" href="sajt.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body class="latin">
     <header id="header">
@@ -103,33 +102,22 @@
             </div>
         </div>
         <button id="showPricesBtn" class="latin-text">Prikaži cene</button>
-        <button id="showPricesBtn" class="cyrillic-text hidden">Прикажи цене</button>
+        <button id="showPricesBtnCyr" class="cyrillic-text hidden">Прикажи цене</button>
     </section>
 
     <section id="contact">
         <h2 class="latin-text">Kontakt</h2>
         <h2 class="cyrillic-text hidden">Контакт</h2>
-        <form id="contactForm" aria-label="Kontakt forma">
-            <label for="name" class="latin-text">Ime:</label>
-            <input type="text" id="name" required>
-
-            <label for="email" class="latin-text">Email:</label>
-            <input type="email" id="email" required>
-
-            <label for="message" class="latin-text">Poruka:</label>
-            <textarea id="message" required></textarea>
-
-            <button type="submit" class="latin-text">Pošalji</button>
-            <button type="submit" class="cyrillic-text hidden">Поšаљи</button>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Ime" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="4" placeholder="Poruka" required></textarea>
+            <button type="submit">Pošalji</button>
         </form>
-        <p id="formResponse" class="hidden"></p>
+        <div id="formResponse" class="hidden"></div>
     </section>
 
-    <footer>
-        <p class="latin-text">Sva prava zadržana &copy; 2024 MatemaTika PROFESOR</p>
-        <p class="cyrillic-text hidden">Сва права задржана &copy; 2024 МатемаТика ПРОФЕСОР</p>
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script src="sajt.js"></script>
 </body>
 </html>

@@ -24,6 +24,7 @@
                 <li><a href="#tools" class="latin-text">Alati</a><a href="#tools" class="cyrillic-text hidden">Алат</a></li>
                 <li><a href="#pricing" class="latin-text">Cene</a><a href="#pricing" class="cyrillic-text hidden">Цене</a></li>
                 <li><a href="#contact" class="latin-text">Kontakt</a><a href="#contact" class="cyrillic-text hidden">Контакт</a></li>
+                <li><a href="https://www.instagram.com/matematika.profesor/" target="_blank" class="latin-text">Instagram</a><a href="https://www.instagram.com/matematika.profesor/" target="_blank" class="cyrillic-text hidden">Инстаграм</a></li>
             </ul>
         </nav>
     </header>
@@ -101,23 +102,65 @@
                 <p class="price cyrillic-text hidden">1h - 1800 RSD</p>
             </div>
         </div>
-        <button id="showPricesBtn" class="latin-text">Prikaži cene</button>
-        <button id="showPricesBtnCyr" class="cyrillic-text hidden">Прикажи цене</button>
     </section>
 
     <section id="contact">
-        <h2 class="latin-text">Kontakt</h2>
-        <h2 class="cyrillic-text hidden">Контакт</h2>
+        <h2 class="latin-text">Kontaktirajte nas</h2>
+        <h2 class="cyrillic-text hidden">Контактирајте нас</h2>
         <form id="contactForm">
-            <input type="text" name="name" placeholder="Ime" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" rows="4" placeholder="Poruka" required></textarea>
-            <button type="submit">Pošalji</button>
+            <input type="text" id="name" placeholder="Ime" required class="latin-text">
+            <input type="text" id="name" placeholder="Име" required class="cyrillic-text hidden">
+            <input type="email" id="email" placeholder="Email" required class="latin-text">
+            <input type="email" id="email" placeholder="Емаил" required class="cyrillic-text hidden">
+            <textarea id="message" placeholder="Poruka" required class="latin-text"></textarea>
+            <textarea id="message" placeholder="Порука" required class="cyrillic-text hidden"></textarea>
+            <button type="submit" class="latin-text">Pošalji</button>
+            <button type="submit" class="cyrillic-text hidden">Пошаљи</button>
         </form>
-        <div id="formResponse" class="hidden"></div>
+        <div id="successMessage" class="hidden latin-text">Poruka je uspešno poslata!</div>
+        <div id="successMessage" class="hidden cyrillic-text">Порука је успешно послата!</div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.2.0/dist/email.min.js"></script>
+    <script>
+        // EmailJS configuration
+        (function(){
+            emailjs.init("wcqOEJyjlrYsSLiWn");
+        })();
+
+        // Language switching
+        const latinButton = document.getElementById("latinButton");
+        const cyrillicButton = document.getElementById("cyrillicButton");
+
+        latinButton.addEventListener("click", () => {
+            document.body.classList.remove("cyrillic");
+            document.body.classList.add("latin");
+            document.querySelectorAll(".latin-text").forEach(el => el.classList.remove("hidden"));
+            document.querySelectorAll(".cyrillic-text").forEach(el => el.classList.add("hidden"));
+        });
+
+        cyrillicButton.addEventListener("click", () => {
+            document.body.classList.remove("latin");
+            document.body.classList.add("cyrillic");
+            document.querySelectorAll(".cyrillic-text").forEach(el => el.classList.remove("hidden"));
+            document.querySelectorAll(".latin-text").forEach(el => el.classList.add("hidden"));
+        });
+
+        // Form submission
+        const contactForm = document.getElementById("contactForm");
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_w7f0n2a", "template_rt1po5b", this)
+                .then(() => {
+                    document.getElementById("successMessage").classList.remove("hidden");
+                    contactForm.reset();
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
     <script src="sajt.js"></script>
 </body>
 </html>

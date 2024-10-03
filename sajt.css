@@ -1,91 +1,90 @@
-/* Osnovni stilovi za telo */
 body {
-    background: linear-gradient(135deg, #ffefba, #ffffff);
-    background-size: 200% 200%;
-    animation: gradient 10s ease infinite;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Animacija pozadine */
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Stilovi za hero sekciju */
-.hero {
-    padding: 50px;
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Stilovi za tabelu cena */
-.pricing-table {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+.language-selection {
+    margin-bottom: 10px;
 }
 
-.pricing-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 200px;
-}
-
-/* Stilovi za preporuke */
-.testimonials {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-.testimonial {
-    margin: 10px 0;
-    font-style: italic;
-}
-
-/* Stilovi za forme */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-label {
-    margin-top: 10px;
-}
-
-input, textarea {
+.language-selection button {
+    margin: 0 5px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Skriveni elementi */
+.logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pricing-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
 .hidden {
     display: none;
 }

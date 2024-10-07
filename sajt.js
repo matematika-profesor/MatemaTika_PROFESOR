@@ -1,26 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const latinButton = document.getElementById('latinButton');
-    const cyrillicButton = document.getElementById('cyrillicButton');
-
-    // Inicijalno prikazivanje latinice
-    showLatinText();
-
-    latinButton.addEventListener('click', showLatinText);
-    cyrillicButton.addEventListener('click', showCyrillicText);
+document.getElementById('latinButton').addEventListener('click', () => {
+    document.body.classList.add('latin');
+    document.body.classList.remove('cyrillic');
+    toggleLanguage(false);
 });
 
-function showLatinText() {
-    const latinElements = document.querySelectorAll('.latin-text');
-    const cyrillicElements = document.querySelectorAll('.cyrillic-text');
+document.getElementById('cyrillicButton').addEventListener('click', () => {
+    document.body.classList.add('cyrillic');
+    document.body.classList.remove('latin');
+    toggleLanguage(true);
+});
 
-    latinElements.forEach(el => el.classList.remove('hidden'));
-    cyrillicElements.forEach(el => el.classList.add('hidden'));
+document.getElementById('showPricesBtn').addEventListener('click', showPrices);
+document.getElementById('showPricesBtnCyr').addEventListener('click', showPrices);
+
+function toggleLanguage(isCyrillic) {
+    document.querySelectorAll('.latin-text').forEach(el => el.classList.toggle('hidden', isCyrillic));
+    document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.toggle('hidden', !isCyrillic));
 }
 
-function showCyrillicText() {
-    const latinElements = document.querySelectorAll('.latin-text');
-    const cyrillicElements = document.querySelectorAll('.cyrillic-text');
-
-    latinElements.forEach(el => el.classList.add('hidden'));
-    cyrillicElements.forEach(el => el.classList.remove('hidden'));
+function showPrices() {
+    document.querySelectorAll('.price').forEach(el => el.classList.toggle('hidden'));
 }

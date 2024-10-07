@@ -1,45 +1,26 @@
-// Inicijalizacija EmailJS
-(function() {
-    emailjs.init("wcqOEJyjlrYsSLiWn");
-})();
+document.addEventListener('DOMContentLoaded', function () {
+    const latinButton = document.getElementById('latinButton');
+    const cyrillicButton = document.getElementById('cyrillicButton');
 
-// Prijem forme
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    // Inicijalno prikazivanje latinice
+    showLatinText();
 
-    const form = event.target;
-    const formData = new FormData(form);
-    const data = {
-        name: formData.get("name"),
-        email: formData.get("email"),
-        message: formData.get("message"),
-    };
-
-    emailjs.send("service_w7f0n2a", "template_rt1po5b", data)
-        .then(function(response) {
-            console.log("SUCCESS!", response.status, response.text);
-            document.getElementById("form-response").innerText = "Poruka je uspešno poslata!";
-            form.reset();
-        }, function(error) {
-            console.log("FAILED...", error);
-            document.getElementById("form-response").innerText = "Došlo je do greške. Pokušajte ponovo.";
-        });
+    latinButton.addEventListener('click', showLatinText);
+    cyrillicButton.addEventListener('click', showCyrillicText);
 });
 
-// Funkcija za prebacivanje jezika
-function toggleLanguage(isCyrillic) {
-    document.querySelectorAll('.latin-text').forEach(el => el.classList.toggle('hidden', isCyrillic));
-    document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.toggle('hidden', !isCyrillic));
+function showLatinText() {
+    const latinElements = document.querySelectorAll('.latin-text');
+    const cyrillicElements = document.querySelectorAll('.cyrillic-text');
+
+    latinElements.forEach(el => el.classList.remove('hidden'));
+    cyrillicElements.forEach(el => el.classList.add('hidden'));
 }
 
-// Prikazati latinicu po defaultu
-toggleLanguage(false);
+function showCyrillicText() {
+    const latinElements = document.querySelectorAll('.latin-text');
+    const cyrillicElements = document.querySelectorAll('.cyrillic-text');
 
-// Event listener za dugmad
-document.getElementById("latinButton").addEventListener("click", function() {
-    toggleLanguage(false);
-});
-
-document.getElementById("cyrillicButton").addEventListener("click", function() {
-    toggleLanguage(true);
-});
+    latinElements.forEach(el => el.classList.add('hidden'));
+    cyrillicElements.forEach(el => el.classList.remove('hidden'));
+}

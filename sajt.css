@@ -1,14 +1,22 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #f8f9fa;
-    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
 }
 
 .language-selection {
     margin-bottom: 10px;
+}
+
+.language-selection button {
+    margin-right: 10px;
 }
 
 .logo {
@@ -16,13 +24,14 @@ header {
     align-items: center;
 }
 
-.logo-img {
-    height: 50px;
+.logo img {
+    width: 50px;
+    height: auto;
     margin-right: 10px;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -31,24 +40,34 @@ nav ul li {
     margin-right: 15px;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #e9ecef;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .pricing-table {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .pricing-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    width: 200px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 10px;
 }
 
-.hidden {
-    display: none;
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
 }

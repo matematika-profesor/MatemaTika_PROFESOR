@@ -1,7 +1,9 @@
+// Inicijalizacija EmailJS
 (function() {
     emailjs.init("wcqOEJyjlrYsSLiWn");
 })();
 
+// Prijem forme
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -34,13 +36,10 @@ function toggleLanguage(isCyrillic) {
 toggleLanguage(false);
 
 // Event listener za dugmad
-const latinButton = document.getElementById("latinButton");
-const cyrillicButton = document.getElementById("cyrillicButton");
-
-latinButton.addEventListener("click", function() {
+document.getElementById("latinButton").addEventListener("click", function() {
     toggleLanguage(false);
 });
 
-cyrillicButton.addEventListener("click", function() {
+document.getElementById("cyrillicButton").addEventListener("click", function() {
     toggleLanguage(true);
 });

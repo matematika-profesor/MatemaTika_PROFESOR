@@ -30,21 +30,17 @@ function toggleLanguage(isCyrillic) {
     document.querySelectorAll('.cyrillic-text').forEach(el => el.classList.toggle('hidden', !isCyrillic));
 }
 
-// Podešavanje defaultnog stanja
-toggleLanguage(false); // Prikazuj latinicu
+// Prikazati latinicu po defaultu
+toggleLanguage(false);
 
 // Event listener za dugmad
 const latinButton = document.getElementById("latinButton");
 const cyrillicButton = document.getElementById("cyrillicButton");
 
 latinButton.addEventListener("click", function() {
-    toggleLanguage(false); // Prikazuj latinicu
+    toggleLanguage(false);
 });
 
 cyrillicButton.addEventListener("click", function() {
-    toggleLanguage(true); // Prikazuj ćirilicu
+    toggleLanguage(true);
 });
-
-function showPrices() {
-    document.querySelectorAll('.price').forEach(el => el.classList.toggle('hidden'));
-}

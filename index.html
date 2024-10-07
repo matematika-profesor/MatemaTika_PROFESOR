@@ -10,8 +10,8 @@
 <body class="latin">
     <header id="header">
         <div class="language-selection">
-            <button id="latinButton">Latinica</button>
-            <button id="cyrillicButton">Ćirilica</button>
+            <button id="latinButton" aria-label="Prebaci na latinicu">Latinica</button>
+            <button id="cyrillicButton" aria-label="Prebaci na ćirilicu">Ćirilica</button>
         </div>
         <div class="logo">
             <img src="https://raw.githubusercontent.com/matematika-profesor/MatemaTika_PROFESOR/main/a.jpg" alt="Logo MatemaTika PROFESOR" class="logo-img">
@@ -80,25 +80,25 @@
             <div class="pricing-item">
                 <h3 class="latin-text">Individualna nastava</h3>
                 <h3 class="cyrillic-text hidden">Индивидуална настава</h3>
-                <p class="price latin-text hidden">1h - 1400 RSD</p>
+                <p class="price latin-text">1h - 1400 RSD</p>
                 <p class="price cyrillic-text hidden">1h - 1400 RSD</p>
             </div>
             <div class="pricing-item">
                 <h3 class="latin-text">Grupa 2,3 učenika</h3>
                 <h3 class="cyrillic-text hidden">Група 2,3 ученика</h3>
-                <p class="price latin-text hidden">1h 30min - 1400 RSD</p>
+                <p class="price latin-text">1h 30min - 1400 RSD</p>
                 <p class="price cyrillic-text hidden">1h 30min - 1400 RSD</p>
             </div>
             <div class="pricing-item">
                 <h3 class="latin-text">Grupa 5+ učenika</h3>
                 <h3 class="cyrillic-text hidden">Група 5+ ученика</h3>
-                <p class="price latin-text hidden">1h 30min - 1000 RSD</p>
+                <p class="price latin-text">1h 30min - 1000 RSD</p>
                 <p class="price cyrillic-text hidden">1h 30min - 1000 RSD</p>
             </div>
             <div class="pricing-item">
                 <h3 class="latin-text">Online časovi</h3>
                 <h3 class="cyrillic-text hidden">Онлайн часови</h3>
-                <p class="price latin-text hidden">1h - 1800 RSD</p>
+                <p class="price latin-text">1h - 1800 RSD</p>
                 <p class="price cyrillic-text hidden">1h - 1800 RSD</p>
             </div>
         </div>
@@ -108,23 +108,28 @@
         <h2 class="latin-text">Kontakt</h2>
         <h2 class="cyrillic-text hidden">Контакт</h2>
         <form id="contact-form">
-            <label class="latin-text">Ime:</label>
-            <input type="text" name="name" required>
-            <label class="cyrillic-text hidden">Име:</label>
-            <input type="text" name="name" required class="hidden">
-            <label class="latin-text">Email:</label>
-            <input type="email" name="email" required>
-            <label class="cyrillic-text hidden">Емаил:</label>
-            <input type="email" name="email" required class="hidden">
-            <label class="latin-text">Poruka:</label>
-            <textarea name="message" required></textarea>
-            <label class="cyrillic-text hidden">Порука:</label>
-            <textarea name="message" required class="hidden"></textarea>
+            <label class="latin-text" for="name">Ime:</label>
+            <label class="cyrillic-text hidden" for="name">Име:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label class="latin-text" for="email">Email:</label>
+            <label class="cyrillic-text hidden" for="email">Емаил:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label class="latin-text" for="message">Poruka:</label>
+            <label class="cyrillic-text hidden" for="message">Порука:</label>
+            <textarea id="message" name="message" required></textarea>
+
             <button type="submit" class="latin-text">Pošalji</button>
-            <button type="submit" class="cyrillic-text hidden">Пошаљи</button>
+            <button type="submit" class="cyrillic-text hidden">Поšаљи</button>
+            <p id="form-response"></p>
         </form>
-        <p id="form-response"></p>
     </section>
+
+    <footer>
+        <p class="latin-text">Pratite nas na Instagramu: <a href="https://www.instagram.com/matematika.profesor" target="_blank">@matematika.profesor</a></p>
+        <p class="cyrillic-text hidden">Пратите нас на Инстаграму: <a href="https://www.instagram.com/matematika.profesor" target="_blank">@математика.професор</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

@@ -151,3 +151,8 @@ footer {
     from { transform: translateY(-20px); }
     to { transform: translateY(20px); }
 }
+
+/* Dodaj .hidden klasu */
+.hidden {
+    display: none;
+}

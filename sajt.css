@@ -180,6 +180,44 @@ footer {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     animation: float-shape 10s ease-in-out infinite alternate;
 }
+.additional-shapes {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rectangle {
+    width: 120px;
+    height: 60px;
+    background: rgba(0, 255, 204, 0.5);
+    border: 2px solid rgba(0, 255, 204, 0.7);
+    border-radius: 10px;
+    animation: pulse 2s infinite alternate;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgba(0, 255, 204, 0.5);
+    animation: float 2s infinite alternate;
+}
+
+/* Animacije */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
 
 /* Dodaj .hidden klasu */
 .hidden {

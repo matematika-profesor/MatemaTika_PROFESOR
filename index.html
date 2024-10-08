@@ -129,49 +129,35 @@
     </footer>
 
     <script>
-        (function() {
-            emailjs.init("wcqOEJyjlrYsSLiWn");
-        })();
-
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
+        function sendEmail(event) {
             event.preventDefault();
-
-            const form = event.target;
+            const form = document.getElementById('contactForm');
             const formData = new FormData(form);
-            const data = {
-                name: formData.get("name"),
-                email: formData.get("email"),
-                message: formData.get("message"),
-            };
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
 
-            emailjs.send("service_w7f0n2a", "template_rt1po5b", data)
-                .then(function(response) {
-                    console.log("SUCCESS!", response.status, response.text);
-                    document.getElementById("form-response").innerText = "Poruka je uspešno poslata!";
-                    form.reset();
-                }, function(error) {
-                    console.log("FAILED...", error);
-                    document.getElementById("form-response").innerText = "Došlo je do greške. Pokušajte ponovo.";
-                });
-        });
+            // Provera validnosti email adrese
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailPattern.test(email)) {
+                alert('Molimo unesite validnu email adresu.');
+                return;
+            }
 
-        // Language Switching Functionality
-        const latinButton = document.getElementById("latinButton");
-        const cyrillicButton = document.getElementById("cyrillicButton");
-
-        latinButton.addEventListener("click", function() {
-            document.body.classList.remove("cyrillic");
-            document.body.classList.add("latin");
-            document.querySelectorAll(".latin-text").forEach(el => el.classList.remove("hidden"));
-            document.querySelectorAll(".cyrillic-text").forEach(el => el.classList.add("hidden"));
-        });
-
-        cyrillicButton.addEventListener("click", function() {
-            document.body.classList.remove("latin");
-            document.body.classList.add("cyrillic");
-            document.querySelectorAll(".cyrillic-text").forEach(el => el.classList.remove("hidden"));
-            document.querySelectorAll(".latin-text").forEach(el => el.classList.add("hidden"));
-        });
+            // EmailJS konfiguracija
+            emailjs.send("service_w7f0n2a", "template_rt1po5b", {
+                from_name: name,
+                from_email: email,
+                message: message
+            })
+            .then((response) => {
+                alert('Poruka je uspešno poslata!');
+                form.reset();
+            })
+            .catch((error) => {
+                alert('Došlo je do greške. Pokušajte ponovo.');
+            });
+        }
     </script>
 </body>
 </html>

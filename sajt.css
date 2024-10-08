@@ -94,6 +94,24 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Dodavanje geometrijskog oblika sa animacijom */
+.geometric-shape {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 255, 204, 0.3);
+    border: 3px solid rgba(0, 255, 204, 0.7);
+    border-radius: 50%;
+    animation: float-shape 3s ease-in-out infinite alternate;
+}
+
+@keyframes float-shape {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(10px); }
+}
+
 .pricing-table {
     display: flex;
     justify-content: space-around;
@@ -163,12 +181,29 @@ footer {
     animation: float-shape 10s ease-in-out infinite alternate;
 }
 
-@keyframes float-shape {
-    from { transform: translateY(-20px); }
-    to { transform: translateY(20px); }
-}
-
 /* Dodaj .hidden klasu */
 .hidden {
     display: none;
+}
+
+/* Responsivnost */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-item {
+        width: 90%;
+    }
+
+    .geometric-shape {
+        width: 100px;
+        height: 100px;
+        top: 10%;
+    }
 }

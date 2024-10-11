@@ -284,3 +284,32 @@ footer {
         top: 10%;
     }
 }
+/* Tvoji postojeći stilovi */
+
+/* Dodavanje responsivnih stilova */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Menjamo raspored elemenata */
+        align-items: center; /* Centriramo sadržaj */
+    }
+    
+    .language-selection {
+        margin-bottom: 10px; /* Razmak između jezika i loga */
+    }
+    
+    .logo {
+        margin-bottom: 15px; /* Razmak između loga i navigacije */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Menjamo raspored navigacije */
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin: 5px 0; /* Razmak između stavki menija */
+    }
+}
+
+/* Ostali stilovi */
+

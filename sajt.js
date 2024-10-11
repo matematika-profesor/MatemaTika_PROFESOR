@@ -4,7 +4,7 @@
 })();
 
 // Funkcija za slanje poruke
-document.getElementById("contact-form").addEventListener("submit", function(event) {
+document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault();
     console.log('Form submitted'); // Dodajte ovu liniju
 

@@ -6,6 +6,7 @@
 // Funkcija za slanje poruke
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
+    console.log('Form submitted'); // Dodajte ovu liniju
 
     const form = event.target;
     const formData = new FormData(form);
@@ -19,10 +20,12 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         .then(function(response) {
             console.log("SUCCESS!", response.status, response.text);
             document.getElementById("form-response").innerText = "Poruka je uspešno poslata!";
+            console.log('Email sent'); // Dodajte ovu liniju
             form.reset();
         }, function(error) {
             console.log("FAILED...", error);
             document.getElementById("form-response").innerText = "Došlo je do greške. Pokušajte ponovo.";
+            console.log('Email failed', error); // Dodajte ovu liniju
         });
 });
 

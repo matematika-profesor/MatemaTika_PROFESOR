@@ -94,6 +94,24 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Dodavanje geometrijskog oblika sa animacijom */
+.geometric-shape {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 255, 204, 0.3);
+    border: 3px solid rgba(0, 255, 204, 0.7);
+    border-radius: 50%;
+    animation: float-shape 3s ease-in-out infinite alternate;
+}
+
+@keyframes float-shape {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(10px); }
+}
+
 .pricing-table {
     display: flex;
     justify-content: space-around;
@@ -162,13 +180,107 @@ footer {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     animation: float-shape 10s ease-in-out infinite alternate;
 }
-
-@keyframes float-shape {
-    from { transform: translateY(-20px); }
-    to { transform: translateY(20px); }
+.additional-shapes {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.rectangle {
+    width: 120px;
+    height: 60px;
+    background: rgba(0, 255, 204, 0.5);
+    border: 2px solid rgba(0, 255, 204, 0.7);
+    border-radius: 10px;
+    animation: pulse 2s infinite alternate;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgba(0, 255, 204, 0.5);
+    animation: float 2s infinite alternate;
+}
+
+.additional-shapes {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rectangle {
+    width: 120px;
+    height: 60px;
+    background: rgba(0, 255, 204, 0.5);
+    border: 2px solid rgba(0, 255, 204, 0.7);
+    border-radius: 10px;
+    animation: pulse 2s infinite alternate;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgba(0, 255, 204, 0.5);
+    animation: float 2s infinite alternate;
+}
+
+/* Animacije */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
+
+/* Animacije */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
 
 /* Dodaj .hidden klasu */
 .hidden {
     display: none;
+}
+
+/* Responsivnost */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-item {
+        width: 90%;
+    }
+
+    .geometric-shape {
+        width: 100px;
+        height: 100px;
+        top: 10%;
+    }
 }
